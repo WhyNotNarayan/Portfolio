@@ -34,7 +34,7 @@ export default function Hero() {
             </a>
           </div>
           <div className="mt-12 flex gap-6">
-            <a href="https://github.com/narayangawade" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-sky-400 transition-colors">
+            <a href="https://github.com/WhyNotNarayan" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-sky-400 transition-colors">
               <Github className="w-7 h-7" />
               <span className="font-medium">GitHub</span>
             </a>
