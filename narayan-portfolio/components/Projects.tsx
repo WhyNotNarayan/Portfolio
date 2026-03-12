@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 
 const projects = [
-  { title: 'Zentracker', desc: 'Zen meditation app with AI insights.', tech: 'Next.js, Firebase', link: '#' },
-  { title: 'Smart Helmet', desc: 'IoT helmet for accident detection.', tech: 'ESP32, Python', link: '#' },
+  { title: 'Zentracker', desc: 'Zen meditation app with AI insights.', tech: 'Next.js, Firebase', link: 'https://zentrack-pvdc.onrender.com' },
+  { title: 'Smart Helmet', desc: 'IoT helmet for accident detection.', tech: 'ESP32, C++, Express.js,node.js,TypeScript', link: 'https://github.com/WhyNotNarayan/SmartHelmet_IOT' },
   { title: 'Autopark', desc: 'Smart parking system with geo-optimization.', tech: 'IoT, Blockchain', link: '#' },
   { title: 'WaterDetection', desc: 'AI-based water leak detector.', tech: 'ML, Raspberry Pi', link: '#' },
   { title: 'Online Saloon Booking', desc: 'Full-stack booking platform.', tech: 'React, Node.js', link: '#' },
