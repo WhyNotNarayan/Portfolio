@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Narayan Ashok Gawade - Portfolio',
     description: 'Full Stack Web3 & Cybersecurity Enthusiast',
-    images: [{ url: 'https://narayangawade.dev/og.jpg' }],
+    images: [{ url: 'E:\\Portfolio\\public\\og.jpg' }],
   },
 };
 
