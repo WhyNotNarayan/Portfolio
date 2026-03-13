@@ -4,7 +4,7 @@ import { Code, Shield, Zap } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-zinc-950/50">
+    <section id="about" className="py-24 bg-zinc-900/50">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
