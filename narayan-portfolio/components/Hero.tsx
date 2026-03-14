@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -8,13 +8,14 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(at_50%_30%,rgba(56,189,248,0.15),transparent_70%)]" />
 
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        {/* Left Side - Text */}
+        {/* Left Side - Text + Buttons (Fixed Clickable Area) */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="relative z-10"  
         >
-          <h6 className="text-6xl md:text-7xl font-bold leading-tight tracking-tighter text-white">
+          <h6 className="text-5xl md:text-6xl font-bold leading-tight tracking-tighter text-white">
             Narayan Ashok Gawade
           </h6>
 
@@ -33,14 +34,14 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#contact"
-              className="px-10 py-4 bg-sky-500 hover:bg-sky-600 rounded-2xl font-semibold text-lg transition-all active:scale-95"
+              className="px-6 py-3 md:px-10 md:py-4 bg-sky-500 hover:bg-sky-600 rounded-2xl font-semibold text-base md:text-lg transition-all active:scale-95 cursor-pointer"
             >
-              Let&apos;s Collaborate
+              Let's Collaborate
             </a>
             <a
               href="/resume.pdf"
               download
-              className="px-8 py-4 border border-white/30 hover:border-white/60 rounded-2xl font-medium flex items-center gap-3 transition-all"
+              className="px-6 py-3 md:px-8 md:py-4 border border-white/30 hover:border-white/60 rounded-2xl font-medium flex items-center gap-3 text-base md:text-lg transition-all cursor-pointer"
             >
               Download Resume
             </a>
@@ -51,19 +52,31 @@ export default function Hero() {
               href="https://github.com/WhyNotNarayan"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 hover:text-sky-400 transition-colors"
+              className="flex items-center gap-3 hover:text-sky-400 transition-colors text-sm md:text-base cursor-pointer"
             >
-              <Github className="w-7 h-7" />
+              <Github className="w-6 h-6 md:w-7 md:h-7" />
               <span className="font-medium">GitHub</span>
             </a>
+
             <a
               href="https://linkedin.com/in/narayangawade"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 hover:text-sky-400 transition-colors"
+              className="flex items-center gap-3 hover:text-sky-400 transition-colors text-sm md:text-base cursor-pointer"
             >
-              <Linkedin className="w-7 h-7" />
+              <Linkedin className="w-6 h-6 md:w-7 md:h-7" />
               <span className="font-medium">LinkedIn</span>
+            </a>
+
+            {/* Instagram Icon & Link */}
+            <a
+              href="https://instagram.com/whynotaadi08"   
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:text-sky-400 transition-colors text-sm md:text-base cursor-pointer"
+            >
+              <Instagram className="w-6 h-6 md:w-7 md:h-7" />
+              <span className="font-medium">Instagram</span>
             </a>
           </div>
         </motion.div>
@@ -75,9 +88,9 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="relative flex justify-center"
         >
-          <div className="absolute -inset-6 bg-gradient-to-br to-indigo-500 rounded-full blur-3xl opacity-30" />
+          <div className="absolute -inset-6 bg-linear-to-br to-indigo-500 rounded-full blur-3xl opacity-30" />
 
-          <div className="p-1 rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 inline-block">
+          <div className="p-1 rounded-full bg-linear-to-r from-sky-400 to-indigo-500 inline-block">
             <img
               src="/profile.png"
               alt="Narayan Ashok Gawade"
