@@ -98,7 +98,7 @@ export default function Hero() {
           />
 
           <motion.div 
-            className="p-1 rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 inline-block z-10 relative"
+            className="p-1 rounded-full bg-linear-to-r from-sky-400 to-indigo-500 inline-block z-10 relative"
             whileHover={{ scale: 1.03 }} // Very slight, smooth zoom
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >

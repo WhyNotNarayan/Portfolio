@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-gradient-to-br from-sky-400 to-indigo-500 rounded-xl flex items-center justify-center font-bold text-xl text-white">N</div>
+          <div className="w-9 h-9 bg-linear-to-br from-sky-400 to-indigo-500 rounded-xl flex items-center justify-center font-bold text-xl text-white">N</div>
           <span className="font-semibold text-2xl tracking-tight text-white">Narayan</span>
         </div>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
           <a
             href="/resume.pdf"
             download
-            className="flex items-center gap-2 px-6 py-3 bg-white text-zinc-950 rounded-2xl font-semibold hover:bg-sky-400 hover:text-white transition-all active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 rounded-2xl font-semibold hover:bg-sky-400 hover:text-white transition-all active:scale-95"
           >
             <Download className="w-4 h-4" />
             Resume
