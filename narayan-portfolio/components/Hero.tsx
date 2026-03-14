@@ -81,22 +81,33 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* YOUR PHOTO */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative flex justify-center"
         >
-          <div className="absolute -inset-6 bg-linear-to-br to-indigo-500 rounded-full blur-3xl opacity-30" />
+          {/* Subtle Outer Glow that expands slightly on hover */}
+          <motion.div 
+            className="absolute -inset-2 bg-sky-500/20 rounded-full blur-2xl"
+            whileHover={{ 
+              scale: 1.2,
+              opacity: 0.4 
+            }}
+            transition={{ duration: 0.4 }}
+          />
 
-          <div className="p-1 rounded-full bg-linear-to-r from-sky-400 to-indigo-500 inline-block">
+          <motion.div 
+            className="p-1 rounded-full bg-gradient-to-r from-sky-400 to-indigo-500 inline-block z-10 relative"
+            whileHover={{ scale: 1.03 }} // Very slight, smooth zoom
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
             <img
               src="/profile.png"
               alt="Narayan Ashok Gawade"
-              className="rounded-full w-85 h-100 object-cover"
+              className="rounded-full w-85 h-100 object-cover shadow-xl"
             />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
