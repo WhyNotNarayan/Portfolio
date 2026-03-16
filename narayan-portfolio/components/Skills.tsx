@@ -19,7 +19,6 @@ const skills = {
     'Blockchain',
     'Web3',
     'Ethereum',
-    'Solidity',
     'Data Analysis',
     'Cloud Services',
   ],
@@ -27,7 +26,7 @@ const skills = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-zinc-950">
+    <section id="skills" className="py-24 bg-zinc-950/50">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -38,7 +37,7 @@ export default function Skills() {
           Skills & Expertise
         </motion.h2>
 
-        {/* Grid of Cards */}
+        {/* Glass Cards - Same as other sections */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(skills).map(([category, items]) => (
             <motion.div
@@ -46,7 +45,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-zinc-900 border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-sky-500/20 transition-shadow"
+              className="glass p-6 rounded-2xl card"   
             >
               <h3 className="text-xl font-semibold mb-4 text-sky-400">{category}</h3>
               <div className="flex flex-wrap gap-2">
