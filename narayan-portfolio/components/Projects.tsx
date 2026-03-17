@@ -4,7 +4,7 @@ import { ExternalLink } from 'lucide-react';
 const projects = [
   { title: 'Zentracker', desc: 'ZenTrack: a minimalist habit tracker with a Smart Sticky Layout that keeps things simple and consistent.', tech: 'Next.js, Firebase, Render', link: 'https://zentrack-pvdc.onrender.com' },
   { title: 'Smart Helmet', desc: 'IoT helmet for accident detection.', tech: 'ESP32, C++, Express.js,node.js,TypeScript,Blockchain', link: 'https://github.com/WhyNotNarayan/SmartHelmet_IOT' },
-  { title: 'Autopark', desc: 'Smart parking system with geo-optimization.', tech: 'PHP,CSS,JavaScript,PhpMyAdmin,', link: '#' },
+  { title: 'Autopark', desc: 'Smart parking system with geo-optimization.', tech: 'PHP,CSS,JavaScript,PhpMyAdmin,', link: 'https://github.com/WhyNotNarayan/Autopark-' },
   { title: 'DeadLine_Drift', desc: 'DeadlineDrift: a web-based toy car racing management system built to manage and display college competition results.', tech: 'Node.js,Express.js,MongoDB,AngularJS,HTML,CSS,JavaScript', link: 'https://dead-line-drift.onrender.com' },
   { title: 'WaterDetection', desc: 'AI-based water leak detector.', tech: 'ML, Raspberry Pi', link: '#' },
   { title: 'Online Saloon Booking', desc: 'Full-stack booking platform.', tech: 'React, Node.js', link: '#' },
