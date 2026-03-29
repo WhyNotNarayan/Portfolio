@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
   images: {
     remotePatterns: [
       {
@@ -9,8 +10,6 @@ const nextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
-    // You could also use:
-    // domains: ["images.unsplash.com"],
   },
 };
 
