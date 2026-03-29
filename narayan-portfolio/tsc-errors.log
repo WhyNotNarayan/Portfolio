@@ -1,0 +1,36 @@
+﻿components/FloatingCubes.tsx(25,5): error TS2339: Property 'mesh' does not exist on type 'JSX.IntrinsicElements'.
+components/FloatingCubes.tsx(26,7): error TS2339: Property 'boxGeometry' does not exist on type 'JSX.IntrinsicElements'.
+components/FloatingCubes.tsx(27,7): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/FloatingCubes.tsx(35,5): error TS2339: Property 'mesh' does not exist on type 'JSX.IntrinsicElements'.
+components/FloatingCubes.tsx(53,7): error TS2339: Property 'ambientLight' does not exist on type 'JSX.IntrinsicElements'.
+components/FloatingCubes.tsx(54,7): error TS2339: Property 'pointLight' does not exist on type 'JSX.IntrinsicElements'.
+components/HeroParticles.tsx(87,5): error TS2339: Property 'lineSegments' does not exist on type 'JSX.IntrinsicElements'.
+components/HeroParticles.tsx(88,7): error TS2339: Property 'lineBasicMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/HeroParticles.tsx(89,5): error TS2339: Property 'lineSegments' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(42,7): error TS2339: Property 'meshBasicMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(56,7): error TS2339: Property 'meshBasicMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(70,7): error TS2339: Property 'meshBasicMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(91,5): error TS2339: Property 'group' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(93,9): error TS2339: Property 'mesh' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(94,11): error TS2339: Property 'sphereGeometry' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(95,11): error TS2339: Property 'meshBasicMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(96,9): error TS2339: Property 'mesh' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(98,5): error TS2339: Property 'group' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(110,9): error TS2339: Property 'ambientLight' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(111,9): error TS2339: Property 'pointLight' does not exist on type 'JSX.IntrinsicElements'.
+components/TechSphere.tsx(112,9): error TS2339: Property 'pointLight' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(24,13): error TS2551: Property 'group' does not exist on type '(<Props extends {}>(Component: string) => ForwardRefExoticComponent<RefAttributes<unknown>>) & ThreeMotionComponents'. Did you mean 'hgroup'?
+components/ThemeToggle3D.tsx(33,7): error TS2339: Property 'group' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(35,11): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(39,11): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(42,11): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(45,11): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(47,7): error TS2339: Property 'group' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(50,7): error TS2339: Property 'group' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(52,11): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(56,11): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(59,11): error TS2339: Property 'meshStandardMaterial' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(61,7): error TS2339: Property 'group' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(63,14): error TS2551: Property 'group' does not exist on type '(<Props extends {}>(Component: string) => ForwardRefExoticComponent<RefAttributes<unknown>>) & ThreeMotionComponents'. Did you mean 'hgroup'?
+components/ThemeToggle3D.tsx(82,9): error TS2339: Property 'ambientLight' does not exist on type 'JSX.IntrinsicElements'.
+components/ThemeToggle3D.tsx(83,9): error TS2339: Property 'directionalLight' does not exist on type 'JSX.IntrinsicElements'.

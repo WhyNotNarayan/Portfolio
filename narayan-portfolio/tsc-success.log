@@ -1,0 +1,13 @@
+﻿components/ThemeToggle3D.tsx(25,7): error TS2322: Type 'RefObject<Group<Object3DEventMap>>' is not assignable to type 'Ref<GroupProps> | undefined'.
+  Type 'RefObject<Group<Object3DEventMap>>' is not assignable to type 'RefObject<GroupProps | null>'.
+    Type 'Group<Object3DEventMap>' is not assignable to type 'GroupProps'.
+      Type 'Group<Object3DEventMap>' is not assignable to type 'Omit<ExtendedColors<Overwrite<Partial<Group<Object3DEventMap>>, NodeProps<Group<Object3DEventMap>, typeof Group>>>, NonFunctionKeys<...>>'.
+        Types of property 'children' are incompatible.
+          Type 'Object3D<Object3DEventMap>[]' is not assignable to type 'ReactNode'.
+            Type 'Object3D<Object3DEventMap>[]' is not assignable to type 'Iterable<ReactNode>'.
+              The types returned by '[Symbol.iterator]().next(...)' are incompatible between these types.
+                Type 'IteratorResult<Object3D<Object3DEventMap>, undefined>' is not assignable to type 'IteratorResult<ReactNode, any>'.
+                  Type 'IteratorYieldResult<Object3D<Object3DEventMap>>' is not assignable to type 'IteratorResult<ReactNode, any>'.
+                    Type 'IteratorYieldResult<Object3D<Object3DEventMap>>' is not assignable to type 'IteratorYieldResult<ReactNode>'.
+                      Type 'Object3D<Object3DEventMap>' is not assignable to type 'ReactNode'.
+                        Type 'Object3D<Object3DEventMap>' is missing the following properties from type 'ReactPortal': props, key
