@@ -1,10 +1,12 @@
-// components/Contact.tsx
 'use client';
+// components/Contact.tsx
+import dynamic from 'next/dynamic';
+const FloatingCubes = dynamic(() => import('./FloatingCubes'), { ssr: false });
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase'; // Import from our new lib
+import { db } from '@/lib/firebase';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -53,7 +55,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-zinc-900/50">
+    <section id="contact" className="py-24 dark:bg-zinc-900/50 bg-slate-100/50 relative overflow-hidden">
+      <FloatingCubes />
+      <div className="relative z-10 w-full h-full">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -62,7 +66,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-xl dark:text-zinc-400 text-slate-600 max-w-2xl mx-auto">
             Let's build something secure and innovative together. Drop a message—I'm all ears for Web3, Cybersecurity, or IoT collabs!
           </p>
         </motion.div>
@@ -80,7 +84,7 @@ export default function Contact() {
                 <Mail className="w-6 h-6 text-sky-400" />
                 <h3 className="text-xl font-semibold">Email Me</h3>
               </div>
-              <p className="text-zinc-300">narayangawade684@gmail.com</p>
+              <p className="dark:text-zinc-300 text-slate-700">narayangawade684@gmail.com</p>
             </div>
 
             <div className="glass p-6 rounded-2xl">
@@ -88,7 +92,7 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-sky-400" />
                 <h3 className="text-xl font-semibold">Call/Text</h3>
               </div>
-              <p className="text-zinc-300">+91 8975347452</p>
+              <p className="dark:text-zinc-300 text-slate-700">+91 8975347452</p>
             </div>
           </motion.div>
 
@@ -106,7 +110,7 @@ export default function Contact() {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/20 focus:border-sky-400 outline-none text-white placeholder-zinc-500 pb-2 text-lg"
+                  className="w-full bg-transparent border-b dark:border-white/20 border-black/20 focus:border-sky-400 outline-none dark:text-white text-slate-900 placeholder-zinc-500 pb-2 text-lg"
                   required
                 />
               </div>
@@ -118,7 +122,7 @@ export default function Contact() {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/20 focus:border-sky-400 outline-none text-white placeholder-zinc-500 pb-2 text-lg"
+                  className="w-full bg-transparent border-b dark:border-white/20 border-black/20 focus:border-sky-400 outline-none dark:text-white text-slate-900 placeholder-zinc-500 pb-2 text-lg"
                   required
                 />
               </div>
@@ -130,7 +134,7 @@ export default function Contact() {
                   placeholder="Subject (e.g., Web3 Project Collab)"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/20 focus:border-sky-400 outline-none text-white placeholder-zinc-500 pb-2 text-lg"
+                  className="w-full bg-transparent border-b dark:border-white/20 border-black/20 focus:border-sky-400 outline-none dark:text-white text-slate-900 placeholder-zinc-500 pb-2 text-lg"
                 />
               </div>
 
@@ -141,7 +145,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white/20 focus:border-sky-400 outline-none text-white placeholder-zinc-500 pb-2 text-lg resize-none"
+                  className="w-full bg-transparent border-b dark:border-white/20 border-black/20 focus:border-sky-400 outline-none dark:text-white text-slate-900 placeholder-zinc-500 pb-2 text-lg resize-none"
                   required
                 />
               </div>
@@ -155,7 +159,7 @@ export default function Contact() {
                     onChange={(e) => setIsRobot(e.target.checked)}
                     className="w-5 h-5 text-sky-500 rounded focus:ring-sky-500"
                   />
-                  <span className="text-sm text-zinc-400">I am not a robot</span>
+                  <span className="text-sm dark:text-zinc-400 text-slate-600">I am not a robot</span>
                 </label>
               </div>
 
@@ -165,7 +169,7 @@ export default function Contact() {
                 className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-sky-500 hover:bg-sky-600 disabled:opacity-50 rounded-2xl font-semibold text-lg transition-all active:scale-95 glass"
               >
                 {loading ? (
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-5 h-5 border-2 dark:border-white/30 border-black/30 border-t-white rounded-full animate-spin" />
                 ) : (
                   <Send className="w-5 h-5" />
                 )}
@@ -197,6 +201,7 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
-    </section>
+          </div>
+</section>
   );
 }
