@@ -1,31 +1,48 @@
 @import "tailwindcss";
 
+/* Force Tailwind v4 to use .dark class for dark mode (same as next-themes sets) */
+@variant dark (&:is(.dark *));
+
 @theme {
-  /* Defining custom aesthetic colors for the palette */
   --color-brand-violet: #a78bfa;
   --color-brand-indigo: #6366f1;
-  --color-glass-slate: rgba(15, 23, 42, 0.65);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
   }
+
+  /* Light mode base */
   body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    /* Using standard hex for the background to avoid the evaluation error */
-    background-color: #020617; 
+    background-color: #f8fafc;
+    color: #0f172a;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  /* Dark mode base — only when .dark is on <html> */
+  .dark body {
+    background-color: #020617;
     color: #e2e8f0;
   }
 }
 
 @layer components {
-  /* High-End Glassmorphism */
+  /* Glassmorphism — adapts to light/dark */
   .glass {
-    background: var(--color-glass-slate);
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    /* Light mode glass */
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .glass {
+    background: rgba(15, 23, 42, 0.65);
+    border-color: rgba(255, 255, 255, 0.08);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
   }
 
@@ -40,7 +57,12 @@
   .card:hover {
     transform: translateY(-10px) scale(1.01);
     border-color: rgba(167, 139, 250, 0.4);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3),
+                0 0 15px rgba(167, 139, 250, 0.1);
+  }
+
+  .dark .card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
                 0 0 15px rgba(167, 139, 250, 0.1);
   }
 
