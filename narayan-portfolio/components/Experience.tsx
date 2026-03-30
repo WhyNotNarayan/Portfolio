@@ -1,3 +1,6 @@
+'use client';
+import dynamic from 'next/dynamic';
+const FloatingCubes = dynamic(() => import('./FloatingCubes'), { ssr: false });
 import { motion } from 'framer-motion';
 import { Calendar } from 'lucide-react'; // Valid
 
@@ -9,13 +12,15 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 bg-zinc-900/50">
+    <section id="experience" className="py-24 dark:bg-zinc-900/50 bg-slate-100/50 relative overflow-hidden">
+      <FloatingCubes />
+      <div className="relative z-10 w-full h-full">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 text-white"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 dark:text-white text-slate-900"
         >
           Experience
         </motion.h2>
@@ -30,18 +35,19 @@ export default function Experience() {
               className="glass p-6 rounded-2xl"
             >
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
-                <div className="flex items-center gap-2 text-sm text-zinc-400">
+                <h3 className="text-xl font-semibold dark:text-white text-slate-900">{exp.role}</h3>
+                <div className="flex items-center gap-2 text-sm dark:text-zinc-400 text-slate-600">
                   <Calendar className="w-4 h-4" />
                   {exp.duration}
                 </div>
               </div>
-              <p className="text-zinc-400 mb-2">{exp.company}</p>
+              <p className="dark:text-zinc-400 text-slate-600 mb-2">{exp.company}</p>
               <p className="text-zinc-500">{exp.desc}</p>
             </motion.div>
           ))}
         </div>
       </div>
-    </section>
+          </div>
+</section>
   );
 }
