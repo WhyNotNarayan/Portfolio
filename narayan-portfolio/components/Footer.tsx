@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, Phone } from 'lucide-react'; // All valid
 
 export default function Footer() {
   return (
-    <footer className="py-12 bg-zinc-950/80 border-t border-white/10">
+    <footer className="py-12 bg-zinc-950/80 border-t dark:border-white/10 border-black/10">
       <div className="max-w-7xl mx-auto px-6 text-center space-y-4">
         <div className="flex justify-center gap-6 text-2xl">
           <a href="mailto:narayangawade684@gmail.com" className="hover:text-sky-400 transition-colors">
