@@ -1,4 +1,6 @@
 'use client';
+import dynamic from 'next/dynamic';
+const FloatingCubes = dynamic(() => import('./FloatingCubes'), { ssr: false });
 import { motion } from 'framer-motion';
 
 const skills = {
@@ -26,13 +28,15 @@ const skills = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-zinc-950/50">
+    <section id="skills" className="py-24 dark:bg-zinc-950/50 bg-slate-50/50 relative overflow-hidden">
+      <FloatingCubes />
+      <div className="relative z-10 w-full h-full">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-16 text-white"
+          className="text-4xl md:text-5xl font-bold text-center mb-16 dark:text-white text-slate-900"
         >
           Skills & Expertise
         </motion.h2>
@@ -52,7 +56,7 @@ export default function Skills() {
                 {items.map((item) => (
                   <span
                     key={item}
-                    className="px-3 py-1 text-sm rounded-full bg-sky-500/10 border border-sky-500/30 text-white"
+                    className="px-3 py-1 text-sm rounded-full bg-sky-500/10 border border-sky-500/30 dark:text-white text-slate-900"
                   >
                     {item}
                   </span>
@@ -62,6 +66,7 @@ export default function Skills() {
           ))}
         </div>
       </div>
-    </section>
+          </div>
+</section>
   );
 }
