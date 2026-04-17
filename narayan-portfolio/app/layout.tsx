@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Navbar from '@/components/Navbar';
+import Navbar from '../components/Navbar';
 import { ThemeProvider } from './ThemeProvider';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
