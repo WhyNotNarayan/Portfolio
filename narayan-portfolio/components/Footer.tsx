@@ -18,7 +18,15 @@ export default function Footer() {
             <Linkedin />
           </a>
         </div>
-        <p className="text-zinc-500">&copy; 2026 Narayan Ashok Gawade. Built with ❤️ in Sindhudurg.</p>
+        <p className="text-zinc-500">&copy; 2026 <span className="text-gradient font-bold">Narayan Ashok Gawade</span>. Built with ❤️ in Sindhudurg.</p>
+        <div className="pt-4 border-t border-white/5 max-w-xs mx-auto">
+          <p className="text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] dark:text-zinc-600 text-slate-400">
+            Created during <span className="text-sky-500/80 font-bold">SY.Bsc.CS</span> • Semester <span className="text-indigo-400">IV</span>
+          </p>
+          <p className="text-[9px] md:text-[10px] uppercase tracking-widest mt-1 dark:text-zinc-700 text-slate-300">
+            Academic Year 2025-26
+          </p>
+        </div>
       </div>
     </footer>
   );

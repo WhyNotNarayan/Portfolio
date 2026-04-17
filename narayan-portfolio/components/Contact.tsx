@@ -146,11 +146,18 @@ export default function Contact() {
               <p className="dark:text-zinc-300 text-slate-700">+91 8975347452</p>
             </div>
 
-            {/* Required fields reminder */}
-            <div className="glass p-5 rounded-2xl border dark:border-white/5 border-black/5">
-              <p className="text-sm dark:text-zinc-400 text-slate-500 leading-relaxed">
-                <span className="text-red-400 font-semibold">*</span> All fields marked below are required before you can send a message. The robot check must also be ticked.
-              </p>
+            {/* Location Map */}
+            <div className="glass p-3 rounded-2xl border dark:border-white/5 border-black/5 overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244900.58988081696!2d73.54877375253816!3d16.140813958937746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc00de8d9dedc89%3A0xe54d603e5c94eef4!2sSindhudurg%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1712078601234!5m2!1sen!2sin"
+                width="100%"
+                height="220"
+                style={{ border: 0, borderRadius: '0.75rem' }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="dark:opacity-80 transition-opacity hover:opacity-100"
+              />
             </div>
           </motion.div>
 

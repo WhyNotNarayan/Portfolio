@@ -1,9 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Instagram } from 'lucide-react';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
-const HeroParticles = dynamic(() => import('./HeroParticles'), { ssr: false });
+const HeroParticles = dynamic(() => import('./HeroParticles'), { 
+  ssr: false,
+  loading: () => <div className="absolute inset-0 dark:bg-zinc-800 bg-zinc-200 animate-pulse opacity-50" />
+});
 const TechSphere = dynamic(() => import('./TechSphere'), { ssr: false });
 
 export default function Hero() {
@@ -21,7 +25,7 @@ export default function Hero() {
           className="relative z-10"
         >
           <h6 className="text-5xl md:text-6xl font-bold leading-tight tracking-tighter dark:text-white text-zinc-900">
-            Narayan Ashok Gawade
+            <span className="text-gradient">Narayan Ashok Gawade</span>
           </h6>
 
           <div className="inline-flex items-center gap-2 px-4 py-1.5 dark:bg-white/5 bg-black/5 rounded-full text-sm mb-6 border dark:border-white/10 border-black/10">
@@ -106,10 +110,14 @@ export default function Hero() {
             whileHover={{ scale: 1.03 }} // Very slight, smooth zoom
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <img
+            <Image
               src="/profile.png"
               alt="Narayan Ashok Gawade"
-              className="rounded-full w-85 h-100 object-cover shadow-xl"
+              width={350}
+              height={400}
+              priority
+              className="rounded-full object-cover shadow-xl"
+              style={{ width: '340px', height: '400px' }}
             />
           </motion.div>
         </motion.div>
