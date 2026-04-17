@@ -6,6 +6,7 @@ import { ExternalLink } from 'lucide-react';
 
 const projects = [
   { title: 'Zentracker', desc: 'ZenTrack: a minimalist habit tracker with a Smart Sticky Layout that keeps things simple and consistent.', tech: 'Next.js, Firebase, Render', link: 'https://zentrack-pvdc.onrender.com' },
+  { title: 'Portfolio-Generator', desc: 'A premium portfolio builder with an automated wizard flow, integrated Razorpay payments, and custom build requests.', tech: 'Next.js, TypeScript, PostgreSQL, Razorpay, WhatsApp API', link: 'https://portfolio-generator-silk.vercel.app/' },
   { title: 'Smart Helmet', desc: 'IoT helmet for accident detection.', tech: 'ESP32, C++, Express.js,node.js,TypeScript,Blockchain', link: 'https://github.com/WhyNotNarayan/SmartHelmet_IOT' },
   { title: 'Autopark', desc: 'Smart parking system with geo-optimization.', tech: 'PHP,Html,CSS,JavaScript,PhpMyAdmin,', link: 'https://github.com/WhyNotNarayan/Autopark-' },
   { title: 'DeadLine_Drift', desc: 'DeadlineDrift: a web-based toy car racing management system built to manage and display college competition results.', tech: 'Node.js,Express.js,MongoDB,AngularJS,HTML,CSS,JavaScript', link: 'https://dead-line-drift.onrender.com' },
